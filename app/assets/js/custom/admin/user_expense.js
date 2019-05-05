@@ -3,14 +3,14 @@
 	var table;
 
 	$(document).ready( function () {
-	/* 	  
+	/*
 		var table = $('#table_contacts').DataTable({
 			serverSide: true,
 			ajax: {
 				url: baseUrl+ '/contacts',
 				type: 'POST'
 			}
-			
+
 		}); */
 		
 		/* var table = $('#table_contacts').DataTable(); */
