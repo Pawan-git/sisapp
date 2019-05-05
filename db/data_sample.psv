@@ -1,0 +1,20 @@
+date|category|employee_name|employee_address|expense_description|pre_tax_amount|tax_amount
+12/1/2018|Travel|Steve Rogers|783 Park Ave New York NY 10021|Taxi ride|350.00|31.06
+12/15/2018|Meals and Entertainment|Tony Stark|1 Infinite Loop Cupertino CA 95014|Team lunch|235.00|17.63
+12/31/2018|Computer - Hardware|Bruce Banner|1 Infinite Loop Cupertino CA 95014|HP Laptop|999.00|74.93
+12/14/2018|Computer - Software|Nick Fury|1 Infinite Loop Cupertino CA 95014|Microsoft Office|899.00|67.43
+12/6/2018|Computer - Software|Natasha Romanoff|1600 Amphitheatre Parkway Mountain View CA 94043|iCloud Subscription|50.00|3.75
+12/9/2018|Computer - Software|Stephen Strange|1600 Amphitheatre Parkway Mountain View CA 94043|iCloud Subscription|50.00|3.75
+11/10/2018|Meals and Entertainment|Carol Danvers|1600 Amphitheatre Parkway Mountain View CA 94043|Coffee with Steve|300.00|22.50
+11/12/2018|Travel|Stephen Strange|1600 Amphitheatre Parkway Mountain View CA 94043|Taxi ride|230.00|17.25
+11/20/2018|Meals and Entertainment|Steve Rogers|783 Park Ave New York NY 10021|Client dinner|200.00|15.00
+10/4/2018|Travel|Carol Danvers|1600 Amphitheatre Parkway Mountain View CA 94043|Flight to Miami|200.00|15.00
+10/12/2083|Computer - Hardware|Steve Rogers|783 Park Ave New York NY 10021|Macbook Air|1|999.00|177.41
+12/9/2018|Computer - Software|Tony Stark|1 Infinite Loop Cupertino CA 95014|Dropbox Subscription|15.00|1.13
+9/18/2018|Travel|Nick Fury|1 Infinite Loop Cupertino CA 95014|Taxi ride|200.00|15.00
+9/30/2018|Office Supplies|Stephen Strange|1600 Amphitheatre Parkway Mountain View CA 94043|Paper|200.00|15.00
+12/30/2018|Meals and Entertainment|Stephen Strange|1600 Amphitheatre Parkway Mountain View CA 94043|Dinner with potential acquisition|200.00|15.00
+1/6/2019|Computer - Hardware|Carol Danvers|1600 Amphitheatre Parkway Mountain View CA 94043|iPhone|200.00|15.00
+1/7/2019|Travel|Tony Stark|1 Infinite Loop Cupertino CA 95014|Airplane ticket to NY|200.00|15.00
+2/3/2019|Meals and Entertainment|Bruce Banner|1 Infinite Loop Cupertino CA 95014|Starbucks coffee|12.00|0.90
+2/18/2019|Travel|Carol Danvers|1600 Amphitheatre Parkway Mountain View CA 94043|Airplane ticket to NY|1500.00|112.50
