@@ -35,27 +35,22 @@ The 'base_url' must be the path upto 'app/' folder ex. 'http://localhost/sisapp/
 Create a database with name 'sis_psvapp' and then run migrations
 Create DB Schema: Use sql file "sis_psvapp.sql" to create DB schema.
 
-************
-Run Migrations
---------------
-************
-
-Goto the directory vendor/bin
-Run the below commands:
-#Create tables in database `sis_psvapp`
-
-phinx migrate -e development -c phinx_config.php
-
-
 ***************
 Run the application in your web browser
 ***************
 
 Try to run the url: 'http://localhost/sisapp/app/'
 
-Credentials to login admin account:
+Login credentials for admin account:
 Username: admin
 Password: sisadmin
+
+Login credentials for user or employee account:
+Username will be username. See users listing page in admin interface.
+Password is same as username.
+There is an option for "password update" in user interface, so they can update password after firsttime logged in. 
+
+We are generating username for employees by using "employee_name" and "employee_address" fields in uploaded psv file.
 
 ***************
 .htaccess

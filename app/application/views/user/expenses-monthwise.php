@@ -1,6 +1,7 @@
 <div class="row mb">
     <div class="col-lg-12">
         <h3>My Expenses</h3>
+
         <div class="content-panel">
             <section id="unseen">
                 <div class="mt">
@@ -81,43 +82,47 @@
                     </div>
                 </div>
                 <div class="mt">
-                    <table id="table_contacts" class="table table-striped table-bordered" cellspacing="0"
-                           width="100%">
-                        <thead>
-                        <tr>
-                            <th>Sr. No.</th>
-                            <th>Date</th>
-                            <th>Pre Tax Amount</th>
-                            <th>Tax Amount</th>
-                            <th>Total</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if (empty($expenses)) {
-                            echo '<tr><td colspan=6>No Record Found!</td> </tr>';
-                        } else {
-                            foreach ($expenses as $key => $value) {
-                                ?>
+                    <div class="container-fluid">
+                        <div class="table-responsive" style="overflow-x: initial;">
+                            <table id="table_contacts" class="table table-striped table-bordered" cellspacing="0"
+                                   width="100%">
+                                <thead>
                                 <tr>
-                                    <td><?php echo $offset + $key + 1; ?></td>
-                                    <td><?php echo date('m/Y', strtotime($value->expense_year_month)); ?></td>
-                                    <td><?php echo $value->pre_tax_amount; ?></td>
-                                    <td><?php echo $value->tax_amount; ?></td>
-                                    <td><?php echo($value->pre_tax_amount + $value->tax_amount); ?></td>
-                                    <td>
-                                        <a href="<?php echo base_url('user/expense-detail') . '/' . strtotime($value->expense_year_month); ?>"
-                                           class="btn btn-info" target="_blank"><i
-                                                class="glyphicon glyphicon-new-window"></i>
-                                            View
-                                            Detail</a></td>
+                                    <th>Sr. No.</th>
+                                    <th>Date</th>
+                                    <th>Pre Tax Amount</th>
+                                    <th>Tax Amount</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
                                 </tr>
-                            <?php }
-                        } ?>
-                        </tbody>
+                                </thead>
+                                <tbody>
+                                <?php
+                                if (empty($expenses)) {
+                                    echo '<tr><td colspan=6>No Record Found!</td> </tr>';
+                                } else {
+                                    foreach ($expenses as $key => $value) {
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $offset + $key + 1; ?></td>
+                                            <td><?php echo date('m/Y', strtotime($value->expense_year_month)); ?></td>
+                                            <td><?php echo $value->pre_tax_amount; ?></td>
+                                            <td><?php echo $value->tax_amount; ?></td>
+                                            <td><?php echo($value->pre_tax_amount + $value->tax_amount); ?></td>
+                                            <td>
+                                                <a href="<?php echo base_url('user/expense-detail') . '/' . strtotime($value->expense_year_month); ?>"
+                                                   class="btn btn-info" target="_blank"><i
+                                                        class="glyphicon glyphicon-new-window"></i>
+                                                    View
+                                                    Detail</a></td>
+                                        </tr>
+                                    <?php }
+                                } ?>
+                                </tbody>
 
-                    </table>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -180,15 +185,5 @@
 <!-- End Bootstrap modal -->
 
 <script src="<?php echo base_url('assets/jquery/jquery-3.1.0.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js') ?>"></script>
-
-<script src="//cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
-
 <!-- custom js -->
 <script src="<?php echo base_url('assets/js/custom/admin/user_expense.js') ?>"></script>
-
-<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/jquery.form.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/validate.js'); ?>"></script>
-
-<script type="text/javascript"
-        src="<?php echo base_url('assets/js/plugins/additional-methods.min.js'); ?>"></script>

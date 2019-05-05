@@ -1,7 +1,7 @@
-
 <div class="row mb">
     <div class="col-lg-12">
         <h3>Expenses Monthwise</h3>
+
         <div class="content-panel">
             <section id="unseen">
                 <div class="mt">
@@ -80,49 +80,50 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="mt">
-                    <section class="no-more-tables">
-                        <table id="table_contacts" class="table table-striped table-bordered" cellspacing="0"
-                               width="100%">
-                            <thead>
-                            <tr>
-                                <th>Sr. No.</th>
-                                <th>Date</th>
-                                <th>Pre Tax Amount</th>
-                                <th>Tax Amount</th>
-                                <th>Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                            if (empty($expenses)) {
-                                echo '<tr><td colspan=6>No Record Found!</td> </tr>';
-                            } else {
-                                foreach ($expenses as $key => $value) {
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $offset + $key + 1; ?></td>
-                                        <td><?php echo date('m/Y', strtotime($value->expense_year_month)); ?></td>
-                                        <td><?php echo $value->pre_tax_amount; ?></td>
-                                        <td><?php echo $value->tax_amount; ?></td>
-                                        <td><?php echo($value->pre_tax_amount + $value->tax_amount); ?></td>
-                                    </tr>
-                                <?php }
-                            } ?>
-                            </tbody>
+                    <div class="container-fluid">
+                        <div class="table-responsive" style="overflow-x: initial;">
+                            <table id="table_contacts" class="table table-striped table-bordered" cellspacing="0"
+                                   width="100%">
+                                <thead>
+                                <tr>
+                                    <th>Sr. No.</th>
+                                    <th>Date</th>
+                                    <th>Pre Tax Amount</th>
+                                    <th>Tax Amount</th>
+                                    <th>Total</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                if (empty($expenses)) {
+                                    echo '<tr><td colspan=6>No Record Found!</td> </tr>';
+                                } else {
+                                    foreach ($expenses as $key => $value) {
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $offset + $key + 1; ?></td>
+                                            <td><?php echo date('m/Y', strtotime($value->expense_year_month)); ?></td>
+                                            <td><?php echo $value->pre_tax_amount; ?></td>
+                                            <td><?php echo $value->tax_amount; ?></td>
+                                            <td><?php echo($value->pre_tax_amount + $value->tax_amount); ?></td>
+                                        </tr>
+                                    <?php }
+                                } ?>
+                                </tbody>
 
-                        </table>
-                    </section>
-                </div>
-                <!-- START: Pagination  -->
-                <div class="col-sm-12">
-                    <div class="dataTables_paginate paging_simple_numbers">
-
-                        <?php echo $this->pagination->create_links(); ?>
-
+                            </table>
+                        </div>
                     </div>
-                </div>
-                <!-- END: Pagination  -->
+                    <!-- START: Pagination  -->
+                    <div class="col-sm-12">
+                        <div class="dataTables_paginate paging_simple_numbers">
 
+                            <?php echo $this->pagination->create_links(); ?>
+
+                        </div>
+                    </div>
+                    <!-- END: Pagination  -->
+                </div>
                 <!-- Bootstrap modal -->
                 <div class="modal fade" id="modal_addExpense" role="dialog" data-keyboard="false"
                      data-backdrop="static">

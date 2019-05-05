@@ -24,6 +24,9 @@
       Author: TemplateMag.com
       License: https://templatemag.com/license/
     ======================================================= -->
+    <style>
+    form label.error{color:red;font-size: 12px;}
+    </style>
 </head>
 <body>
 <section id="container">
@@ -87,6 +90,7 @@
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="<?php echo base_url('assets/admin/lib/jquery/jquery.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/admin/lib/bootstrap/js/bootstrap.min.js') ?>"></script>
+
 <script src="<?php echo base_url('assets/admin/lib/jquery.dcjqaccordion.2.7.js') ?>"></script>
 <script src="<?php echo base_url('assets/admin/lib/jquery.scrollTo.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/admin/lib/jquery.nicescroll.js') ?>"></script>

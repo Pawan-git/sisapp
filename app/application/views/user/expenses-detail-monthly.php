@@ -1,7 +1,7 @@
-
 <div class="row mb">
     <div class="col-lg-12">
         <h3>Expenses in month: <?php echo date("m/Y", $timestr); ?></h3>
+
         <div class="content-panel">
             <section id="unseen">
                 <div class="mt">
@@ -30,48 +30,50 @@
                     </div>
                 </div>
                 <div class="mt">
-                    <table id="table_contacts" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                        <thead>
-                        <tr>
-                            <th>Sr. No.</th>
-                            <th>Date</th>
-                            <th style="width:20%;">Category</th>
-                            <th style="width:20%;">Description</th>
-                            <th>Pre Tax Amount</th>
-                            <th>Tax Amount</th>
-                            <th>Total</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if (empty($expenses)) {
-                            echo '<tr><td colspan=7>No Record Found!</td> </tr>';
-                        } else {
-                            foreach ($expenses as $key => $value) {
-                                ?>
+                    <div class="container-fluid">
+                        <div class="table-responsive" style="overflow-x: initial;">
+                            <table id="table_contacts" class="table table-striped table-bordered" cellspacing="0"
+                                   width="100%">
+                                <thead>
                                 <tr>
-                                    <td><?php echo $offset + $key + 1; ?></td>
-                                    <td><?php echo date('m/d/Y', strtotime($value->expense_date)); ?></td>
-                                    <td><?php echo $value->expense_category; ?></td>
-                                    <td><?php echo $value->expense_description; ?></td>
-                                    <td><?php echo $value->pre_tax_amount; ?></td>
-                                    <td><?php echo $value->tax_amount; ?></td>
-                                    <td><?php echo($value->pre_tax_amount + $value->tax_amount); ?></td>
+                                    <th>Sr. No.</th>
+                                    <th>Date</th>
+                                    <th style="width:20%;">Category</th>
+                                    <th style="width:20%;">Description</th>
+                                    <th>Pre Tax Amount</th>
+                                    <th>Tax Amount</th>
+                                    <th>Total</th>
                                 </tr>
-                            <?php }
-                        } ?>
-                        </tbody>
-
-                    </table>
-                    <!-- START: Pagination  -->
-                    <div class="col-sm-12">
-                        <div class="dataTables_paginate paging_simple_numbers">
-
-                            <?php echo $this->pagination->create_links(); ?>
-
+                                </thead>
+                                <tbody>
+                                <?php
+                                if (empty($expenses)) {
+                                    echo '<tr><td colspan=7>No Record Found!</td> </tr>';
+                                } else {
+                                    foreach ($expenses as $key => $value) {
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $offset + $key + 1; ?></td>
+                                            <td><?php echo date('m/d/Y', strtotime($value->expense_date)); ?></td>
+                                            <td><?php echo $value->expense_category; ?></td>
+                                            <td><?php echo $value->expense_description; ?></td>
+                                            <td><?php echo $value->pre_tax_amount; ?></td>
+                                            <td><?php echo $value->tax_amount; ?></td>
+                                            <td><?php echo($value->pre_tax_amount + $value->tax_amount); ?></td>
+                                        </tr>
+                                    <?php }
+                                } ?>
+                                </tbody>
+                            </table>
+                            <!-- START: Pagination  -->
+                            <div class="col-sm-12">
+                                <div class="dataTables_paginate paging_simple_numbers">
+                                    <?php echo $this->pagination->create_links(); ?>
+                                </div>
+                            </div>
+                            <!-- END: Pagination  -->
                         </div>
                     </div>
-                    <!-- END: Pagination  -->
                 </div>
             </section>
         </div>

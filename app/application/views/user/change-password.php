@@ -1,6 +1,6 @@
 <div class="row mb">
     <div class="col-lg-12">
-        <h3>My Expenses</h3>
+        <h3><?php echo $title; ?></h3>
         <section id="unseen">
             <div class="mt">
                 <div class="col-md-4 col-md-offset-4">
@@ -43,13 +43,14 @@
     </div>
 </div>
 <script src="<?php echo base_url('assets/js/plugins/jquery-1.11.1.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/js/plugins/jquery.validate.min.js') ?>"></script>
+<!-- <script src="<?php echo base_url('assets/js/plugins/jquery.validate.min.js') ?>"></script> -->
+
+<script src="<?php echo base_url('assets/js/plugins/validate.js') ?>"></script>
 
 <script type="text/javascript">
-
-    $(function () {
-
-        $('#form_password_update').validate({
+    var jQ = jQuery.noConflict(true);
+    jQ(function () {
+        jQ('#form_password_update').validate({
             "rules": {
                 "old_password": {
                     "required": true,

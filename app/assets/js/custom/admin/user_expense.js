@@ -3,29 +3,11 @@
 	var table;
 
 	$(document).ready( function () {
-	/*
-		var table = $('#table_contacts').DataTable({
-			serverSide: true,
-			ajax: {
-				url: baseUrl+ '/contacts',
-				type: 'POST'
-			}
-
-		}); */
-		
-		/* var table = $('#table_contacts').DataTable(); */
- 
-    // Sort by columns 1 and 2 and redraw
-   /*  table
-    .order( [[ 1, 'asc' ], [ 2, 'asc' ]] )
-    .draw(); */
-		
 		
 		$('select[name="show"]').on('change',function(){
-		
 			$('#form_search_filter').submit();
 		});
-		
+        
 	}); 
  
 	function clear_search($uri){
