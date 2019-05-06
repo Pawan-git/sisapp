@@ -1,8 +1,7 @@
-SiSApp: Expense entry system
+SiSApp: Expense Entry System
 ===============================
-
- A demo application to feed employee expense from a pipe-separated (PSV) file and to get monthly expense report on web page.
- ```````````````````````````````````````````````
+A demo application to feed employee expense from a pipe-separated (PSV) file and to get monthly expense report on web page.
+ 
 DIRECTORY STRUCTURE
 -------------------
 
