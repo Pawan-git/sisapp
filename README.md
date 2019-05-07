@@ -19,7 +19,6 @@ vendor/                  contains dependent 3rd-party packages
 
 ```
 
-
 Installation
 --------------
 
@@ -40,7 +39,7 @@ The `base_url` must be the path upto `app/` folder ex. 'http://localhost/sisapp/
 	```
 	Run migrations( See Run Migrations section below).
 	```
-## Run Migrations
+### Run Migrations
 
 Goto the directory `vendor/bin` and then run the below commands:
 * Create tables in database `sis_psvapp`
@@ -51,9 +50,9 @@ phinx migrate -e development -c phinx_config.php
 ``` 
 phinx seed:run -s UserSeeder -e development -c phinx_config.php 
 ```
+******************************************
 
-## Run the application in your web browser
-------------------------------------------
+### Run the application in your web browser
 
 Try to run the url: 'http://localhost/sisapp/app/'
 
@@ -63,15 +62,16 @@ Username: admin
 Password: sisadmin
 ```
 * Login credentials for user or `Employee` account:
-Username will be username. See users listing page in admin interface.
+```
+See users listing page in admin interface.
 Password is same as username.
-There is an option for "password update" in user interface, so they can update password after firsttime logged in. 
-
+```
+There is an option for "password update" in user interface, so they can update password after first time logged in. 
 We are generating username for employees by using "employee_name" and "employee_address" fields in uploaded psv file.
 
 *******************************************
+
 ``` .htaccess ``` file in app folder will look like this:
-*******************************************
 ```
 RewriteEngine On
 RewriteBase /sisapp/app/   #you might be need to change this path according to your folders
