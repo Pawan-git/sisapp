@@ -20,10 +20,8 @@ vendor/                  contains dependent 3rd-party packages
 ```
 
 
-************
-Installation
---------------
-************
+
+##Installation
 
 Download the git repo and place it in htdocs directory inside xampp
 OR you may clone the git repo in a directory.
@@ -31,8 +29,25 @@ OR you may clone the git repo in a directory.
 Set the 'base_url' inside app/application/config.php file.
 The 'base_url' must be the path upto 'app/' folder ex. 'http://localhost/sisapp/app/'
 
-Create a database with name 'sis_psvapp' and then run migrations
-Create DB Schema: Use sql file "sis_psvapp.sql" to create DB schema.
+
+Database Creation
+-----------------
+
+Create a database with name 'sis_psvapp'.
+
+##Create DB Schema: 
+To create DB schema and data seed you can either use sql file `sis_psvapp.sql` OR run migrations( See Run Migrations section below).
+
+************
+Run Migrations
+--------------
+************
+
+Goto the directory `vendor/bin` and then run the below commands:
+##Create tables in database `sis_psvapp`
+``` phinx migrate -e development -c phinx_config.php ```
+##Seed userdata in `user` table
+``` phinx seed:run -s UserSeeder -e development -c phinx_config.php ```
 
 ***************
 Run the application in your web browser
@@ -50,10 +65,6 @@ Password is same as username.
 There is an option for "password update" in user interface, so they can update password after firsttime logged in. 
 
 We are generating username for employees by using "employee_name" and "employee_address" fields in uploaded psv file.
-
-***************
-.htaccess
-***************
 
 *******************************************
 ``` .htaccess ``` file in app folder will look like this:
